@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>D&D Helper</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body >
+  <div id="app" class="container">
+    <div class="text-center">
+      <h1>D&D Helper 1.0</h1>
+      <div>
+        {{message}}
+      </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+      <div class="col-lg-3 col-md-3 col-sm-4">
+        <div class="list-group table-of-contents">
+          <a class="list-group-item" href="#roll">Let's roll</a>
+          <a class="list-group-item" href="#tables">Tables</a>
+          <a class="list-group-item" href="#monstes">Monsters</a>
+          <a class="list-group-item" href="#spells">Spells</a>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-9 col-sm-8">
+        <div class="input-group">
+          <input v-model="monster" type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button v-on:click="searchMonsters" class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div><!-- /input-group -->
+        <div>
+          {{s}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+  <script src="js/vue.js"></script>
+  <script src="js/monsters.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
